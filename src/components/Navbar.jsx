@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { FaSearch } from "react-icons/fa"
 import { FaQuestionCircle } from "react-icons/fa"
-import { LiaShoppingCartSolid } from "react-icons/lia";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { LiaShoppingCartSolid } from "react-icons/lia"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 const Navbar = () => {
   return (
