@@ -13,27 +13,27 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='overall-container sticky-bottom'>
+    <div className='overall-container'>
         <div className='footer-top mb-0'>
            <div>
              <div  className='icon d-flex justify-content-evenly'>
-               <h4><MdEmail /></h4>
+               <h6><MdEmail /></h6>
                <ul>
-                <li><h5>EMAIL</h5>konga@gmail.com</li>
+                <li><h6>EMAIL</h6>konga@gmail.com</li>
                </ul>
 
-               <h4><FaPhoneAlt /></h4>
+               <h6><FaPhoneAlt /></h6>
                <ul>
-                <li><h5>PHONE</h5>234-332-2233,334-223-4433</li>
+                <li><h6>PHONE</h6>234-332-2233,334-223-4433</li>
                </ul>
 
-               <h4><ImWhatsapp /></h4>
+               <h6><ImWhatsapp /></h6>
                <ul>
-                <li><h5>WHATSAPP</h5>234-332-2233,334-665-7654</li>
+                <li><h6>WHATSAPP</h6>234-332-2233,334-665-7654</li>
                </ul>
 
                <ul>
-                <li><h5>GET LATEST DEALS</h5>Our best promotions sent to your inbox.</li>
+                <li><h6>GET LATEST DEALS</h6>Our best promotions sent to your inbox.</li>
                </ul>
                <input type="text" placeholder='Email Address'/>
                <button className='button ml-0'><h5>Subscribe</h5>
@@ -135,7 +135,7 @@ const Footer = () => {
             
           </div>
           <div className='text-center'>
-            <h6>Created And Designed by Enitan Ajayi</h6> <hr />
+            <h6>Created And Designed by </h6> <hr />
         </div>
          
         </div>
