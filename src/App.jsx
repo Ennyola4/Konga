@@ -9,6 +9,7 @@ import Product from './pages/Product'
 import Locator from './pages/Locator'
 import Navbar from './components/Navbar'
 import SubMenu from './components/SubMenu'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
         <Route path='/locator' element={<Locator/>} />
         </Routes>
       </Router>
+      <Footer/>
     </div>
   )
 }
