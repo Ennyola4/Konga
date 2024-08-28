@@ -308,7 +308,7 @@
   display: none; /* Hide scrollbar */
 }
 
-.overall-container1{
+/* .overall-container1{
   height: auto;
   color: #fff;
 }
@@ -368,4 +368,65 @@ padding: 5px 5px;
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
+} */
+
+li a{
+  color: white;
+  text-decoration: none;
+  /* line-height: 2rem; */
+}
+
+li {
+  list-style-type: none;
+}
+
+.small:hover{
+  color: white !important;
+}
+
+.icon-facebook {
+  color: inherit;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: transparent;
+
+}
+
+.icon-facebook:hover {
+  color: #1877f2;
+  background-color: #fff;
+}
+
+.icon-twitter {
+  color: inherit;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.icon-twitter:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.icon-instagram {
+  color: inherit;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.icon-instagram:hover {
+  color: #fff;
+  background: linear-gradient(to right, #e1306c, #c13584, #f77737, #fcaf45);
+}
+
+.icon-youtube {
+  color: inherit;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.icon-youtube:hover{
+  color: #FF0000;
+  background-color: #fff;
+  background: '#fff';
+  
 }

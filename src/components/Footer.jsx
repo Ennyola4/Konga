@@ -1,144 +1,432 @@
 import React from 'react'
-import { MdEmail } from "react-icons/md"
-import { FaPhoneAlt } from "react-icons/fa"
-import { ImWhatsapp } from "react-icons/im"
-import { FiFacebook } from "react-icons/fi"
-import { FaXTwitter } from "react-icons/fa6"
-import { RiInstagramFill } from "react-icons/ri"
+import { FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-
-
-
-
+import { FaApple } from "react-icons/fa";
+import { IoLogoAndroid } from "react-icons/io";
+import { TbMailFilled } from "react-icons/tb";
+import { ImPhone } from "react-icons/im";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='overall-container1'>
-        <div className='footer-top mb-0'>
-           <div>
-             <div  className='icon1 d-flex justify-content-evenly'>
-               <h6><MdEmail /></h6>
-               <ul>
-                <li><h6>EMAIL</h6>konga@gmail.com</li>
-               </ul>
+    <div>
+                 {/* {UPPER FOOTER} */}
+        <div className='mt-5 py-1 text-light' style={{ backgroundColor: "#2e2e2e", overflow: "hidden"}}>
+            <div className='d-flex justify-item-content-between align-items-center'  style={{ padding: "10px 0", flexWrap: "wrap"}}>
 
-               <h6><FaPhoneAlt /></h6>
-               <ul>
-                <li><h6>PHONE</h6>234-332-2233,334-223-4433</li>
-               </ul>
+                {/* EMAIL SUPPORT */}
+            <div style={{margin: "0 10px", flex: "0 1 200px"
+            }}>
+                <a href="#" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        textDecoration: 'none',
+                        color: "#918c8c"
+                    }}><TbMailFilled size={35}
+                    style={{
+                        background: '#fff',
+                        color: '#000000',
+                        cursor: 'pointer',
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        padding: "8px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "35px",   
+                        height: "35px",
+                        }}/>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                        }}>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                marginBottom: "8px",
+                                fontSize: "16px",
+                                fontWeight: "bold",
+                                }}>
+                                EMAIL SUPPORT
+                            </span>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "14px",
+                                
+                                }}>
+                                    help@konga.com
+                            </span>
+                        </div>
+                        </a>
+                </div>
 
-               <h6><ImWhatsapp /></h6>
-               <ul>
-                <li><h6>WHATSAPP</h6>234-332-2233,334-665-7654</li>
-               </ul>
+                {/* PHONE SUPPORT */}
+            <div style={{
+                margin: "0 10px",
+                flex: "1 1 200px"
+            }}>
+                <a href="#" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        textDecoration: 'none',
+                        color: "#918c8c"
+                    }}><ImPhone size={35}
+                    style={{
+                        background: '#fff',
+                        color: '#000000',
+                        cursor: 'pointer',
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        padding: "8px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "35px",   
+                        height: "35px",
+                        }}/>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                        }}>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "16px",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                }}>
+                                PHONE SUPPORT
+                            </span>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "14px",
+                                overflow: "hidden",
+                                whiteSpace: "nowrap"
+                                }}>
+                                    0708 063 5700,0201 888 3435
+                            </span>
+                        </div>
+                        </a>
+                </div>
 
-               <ul>
-                <li><h6>GET LATEST DEALS</h6>Our best promotions sent to your inbox.</li>
-               </ul>
-               <input type="text" placeholder='Email Address'/>
-               <button className='button1 ml-0'><h5>Subscribe</h5>
-               </button>
-             </div>
-           </div>
+                    {/* WHATSAPP */}
+            <div style={{
+                margin: "0 10px",
+                flex: "0 1 200px"
+            }}>
+                <a href="#" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        textDecoration: 'none',
+                        color: "#918c8c"
+                    }}><FaWhatsapp size={35}
+                    style={{
+                        background: '#fff',
+                        color: '#000000',
+                        cursor: 'pointer',
+                        borderRadius: "20px",
+                        marginRight: "10px",
+                        padding: "6px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        width: "35px",   
+                        height: "35px",
+                        }}/>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                        }}>
+                            <span style={{
+                                display: "block",
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "16px",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                }}>
+                                WHATSAPP
+                            </span>
+                            <span style={{
+                                display: "block",
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "14px",
+                                overflow: "hidden",
+                                whiteSpace: "nowrap"
+                                }}>
+                                    0907 0038 400, 0809 460 555
+                            </span>
+                        </div>
+                        </a>
+                </div>
+
+
+                    {/* LATEST DEALS */}
+            <div style={{
+                margin: "0 10px",
+                flex: "1 1 200px"
+            }}>
+                <a href="#" style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        textDecoration: 'none',
+                        color: "#918c8c"
+                    }}>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "center",
+                        }}>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "16px",
+                                marginBottom: "8px",
+                                fontWeight: "bold",
+                                }}>
+                                GET LATEST DEALS
+                            </span>
+                            <span style={{
+                                textAlign: "left",
+                                color: "#918c8c",
+                                fontSize: "13px",
+                                overflow: "hidden",
+                                whiteSpace: "nowrap"
+                                }}>
+                                    Our best promotions sent to your inbox.
+                            </span>
+                        </div>
+                        </a>
+                </div>
+            <div style={{
+                margin: "0 10px",
+                flex: "1 1 200px",
+                flexGrow: 1
+            }}>
+            <form className="d-flex align-items-center" style={{
+                justifyContent: "center", 
+            }}>
+                    <input type="email" placeholder="Email Address" className="form-control my-2" style={{
+                        padding: "12px",
+                        fontSize: "14px",
+                        height: "auto",
+                        border: "none",
+                        outline: "none",
+                        borderRadius: '0px',
+                         borderTopLeftRadius: "3px",
+                        borderBottomLeftRadius: "3px"
+                        }}/ >
+                    <button className="btn btn-info my-2" style={{
+                        backgroundColor: "#ed017f",
+                        color: "#fff",
+                        fontWeight: "bold",
+                        border: "none",
+                        outline: "none",
+                        borderRadius: '0px',
+                        borderTopRightRadius: "3px",
+                        borderBottomRightRadius: "3px",
+                        borderTopLeftRadius: "0px",
+                        borderBottomLeftRadius: "0px",
+                        padding: "12px",
+                        fontSize: "14px",
+                    }}>Subscribe</button>
+            </form>
+            </div>
+
+        </div>
+     </div>
+        
+    
+            {/* //   {MAIN FOOTER} //  */}
+        <div className='mt-0 py-3 text-light' style={{ backgroundColor: "#0c0c0c"}}>
+        <div className='d-flex justify-content-around'>
+        <div>
+            <ul>
+              <li><h6 className="mb-4" style={{color: "#d1caca"}} href="#">ABOUT KONGA</h6></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Contact Us</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Careers</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Contact Us</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Our Blog</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Forum</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Terms &amp; Condition</a></li>
+            </ul>
         </div>
 
-        <div className='footer-bottom'>
-            <div className='d-flex justify-content-around'>
-              <div>
-                <ul>
-                  <li>
-                  <li><h5 href ="#">ABOUT KONGA</h5></li> 
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">Our Blog</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                  </li>
-                </ul>
-              </div>
+        <div>
+          <ul>
+              <li><h6 className="mb-4" style={{color: "#d1caca"}} href="#">PAYMENT</h6></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">KongaPay</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Wallet</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Verve</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Mastercard</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Visa</a></li>
+          </ul>
+        </div>
 
-              <div>
-                <ul>
-                    <li><h5 href="#">PAYMENT</h5></li> 
-                    <li><a href="#">KongaPay</a></li>
-                    <li><a href="#">Wallet</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Verve</a></li>
-                    <li><a href="#">Master Card</a></li>
-                    <li><a href="#">Visa</a></li>
+        <div>
+          <ul>
+              <li><h6 className='mb-4' style={{color: "#d1caca"}} href="#">BUYING ON KONGA</h6></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Buyer Safety Centre</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">FAQs</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Delivery</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Konga Return Policy</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Digital Services</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Bulk Purchase</a></li>
+          </ul>
+        </div>
 
-                </ul>
-            </div>
+        <div>
+          <ul>
+              <li><h6 className="mb-4" style={{color: "#d1caca"}} href="#">MORE INFO</h6></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Site Map</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Track My Order</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Privacy Policy</a></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Authentic Items Policy</a></li>
+          </ul>
+        </div>
 
-            <div>
-                <ul>
-                    <li><h4 href="#">BUYING ON KONGA</h4></li> 
-                    <li><a href="#">Buyer Safety Center</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Kong Return Policy</a></li>
-                    <li><a href="#">Digital Services</a></li>
-                    <li><a href="#">Bulk Purchases</a></li>
-                </ul>
-            </div>
+        <div>
+          <ul>
+              <li><h6 className="mb-4" style={{color: "#d1caca"}} href="#">MAKE MONEY ON KONGA</h6></li>
+              <li><a className="small" style={{color: "#918c8c"}} href="#">Become a Konga Affiliate</a></li>
+          </ul>
+        </div>
 
-            <div>
-                <ul>
-                    <li><h4 href="#">MORE INFO</h4></li>
-                    <li><a href="#">Site Map</a></li>
-                    <li><a href="#">Track My Order</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Authentic Items Policy</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li><h4 href="#">MAKE MONEY ON KONGA</h4></li>
-                    <li><a href="#">Become a Konga Affiliate</a></li>
-                </ul>
-            </div>
-
-           
-
-            <div className='d-flex'>
-              <div>
-
-              <ul>
+        <div>
+            <ul>
                 <li>
-                <img src="https://static.vecteezy.com/system/resources/previews/021/496/284/original/apple-app-store-icon-logo-symbol-white-design-mobile-illustration-with-black-background-free-vector.jpg" alt="" />
-              
-              <img src="https://www.eunati.com.br/wp-content/uploads/2018/02/escola-brasileira-de-games-eu-na-ti-google-play-864x440.jpg" alt="" /> <br /><br />
-              
-              <h5>CONNECT WITH US</h5>
-              <div className='d-flex'>
-              <a href="#" className='btn btn-dark me-5'><h5><FiFacebook /></h5></a>
-              <a href="#" className='btn btn-dark me-5'><h5><FaXTwitter /></h5></a>
-              <a href="#" className='btn btn-dark me-5'><h5><RiInstagramFill /></h5></a>
-              <a href="#" className='btn btn-dark me-5'><h5><FaYoutube /></h5></a>
-              
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#000000',
+                        color: '#fff',
+                        border: 'none',
+                        padding: '1px 15px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                    }}>
+                        <FaApple size={35} />
+                        <div style={{
+                             marginLeft: "10px",
+                             display: "inline-flex",
+                             flexDirection: "column",
+                             justifyContent: "center",
+ 
+                        }}>
+                        <span style={{
+                             display: "block",
+                             textAlign: "left",
+                             color: "#918c8c",
+                             fontSize: "13px",
+                             marginBottom: "-4px",
+                             }}>
+                                Download on
+                        </span>
+                        <span style={{
+                             display: "block",
+                             textAlign: "left",
+                             color: "#918c8c",
+                             fontSize: "18px",
+                             fontWeight: "bold",
+                             }}>
+                                App Store
+                        </span>
+                        </div>
+                    </button>
+                </li>
 
-
-              </div>
-
-
-              </li>
-              </ul>
-
-              </div>
-              
-            </div>
-           
-            
-         
-            
-          </div>
-          <div className='text-center'>
-            <h6>Created And Designed by </h6> <hr />
+                <li className='mt-4'>
+                    <h6  style={{color: "#d1caca"}}>CONNECT WITH US
+                    <div className='d-flex my-0' >
+                        <div className='me-3 fs-2 icon-facebook'><FaFacebook/></div>
+                        <div className='me-3 fs-2
+                        icon-twitter'><FaXTwitter /></div>
+                        <div className='me-3 fs-2
+                        icon-instagram'><FaInstagram /></div>
+                        <div className='me-3 fs-2
+                        icon-youtube'><FaYoutube /></div>
+                    </div>
+                    </h6>
+                </li>
+            </ul>
         </div>
-         
+
+        <div className="mx-2">
+            <ul>
+                <li>
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#000000',
+                        color: '#fff',
+                        border: 'none',
+                        padding: '1px 10px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                    }}>
+                        <IoLogoAndroid size={35}/>
+                        <div style={{
+                             marginLeft: "10px",
+                             display: "inline-flex",
+                             flexDirection: "column",
+                             justifyContent: "center",
+ 
+                        }}>
+                        <span style={{
+                             display: "block",
+                             textAlign: "left",
+                             color: "#918c8c",
+                             fontSize: "13px",
+                             marginBottom: "-4px",
+                             }}>
+                                Download on
+                        </span>
+                        <span style={{
+                             display: "block",
+                             textAlign: "left",
+                             color: "#918c8c",
+                             fontSize: "18px",
+                             fontWeight: "bold",
+                             }}>
+                                Google Play
+                        </span>
+                        </div>
+                    </button>
+                </li>
+            
+            </ul>
         </div>
+
+      </div>
+
+                    {/* COPYRIGHT TAG */}
+      <div className='text-center mt-5'
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: "#918c8c",
+      }}>
+        <div style={{ flex: 1, height: '0.06px', background: '#918c8c' }}></div>
+            <p style={{ margin: '0 7px'}}>Copyright &copy; 2024 Konga.com. All rights reserved</p>
+            <div style={{ flex: 1, height: '0.06px', background: '#918c8c' }}></div>
+        </div>
+
+        <div className='text-center'  style={{color: "#918c8c"}}>
+            <p>Made with ❤️ by Group C</p>
+        </div>
+    </div>
+
     </div>
   )
 }
