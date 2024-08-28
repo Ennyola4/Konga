@@ -1,153 +1,357 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  .navbar{
-    background-color: #ed017f;
-    z-index: 1050;
-    position: relative;
-  }
-  
-  .navbar .dropdown-menu {
-    z-index: 1100;
-    position: absolute;
-  }
-  
-  .custom-navbar {
-    padding: 0rem 0rem;
-    font-size: 0.875rem;
-    height: 3.75rem;
-  }
-  
-  .navbar .nav-item {
-    position: relative;
-    transition: background-color 0.3s;
-    height: 100%;
-  }
-  
-  .nav-item:hover {
-    background-color: white;  
-  }
-  
-  
-  .nav-item:hover .nav-link{
-    color: #ed017f !important;
-  }
-  
-  .subnavbar {
-    background-color: #94004f;
-  }
-  
-  .navbar .nav-link-hover {
-    color: white;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 12px 0px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar .nav-link-hover:hover {
-    color: #080808 !important;
-    background-color: #fff !important;
-    padding: 12px 0px !important;
-    text-decoration: none;
-  }
-  
-  .navbar .custom-nav-link-hover {
-    color: white;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    padding: 12px 12px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  .navbar .custom-nav-link-hover:hover {
-    color: #ed017f !important;
-    background-color: #fff !important;
-    padding: 12px 12px !important;
-    align-items: center;
-    text-decoration: none;
-  }
-  
-  
-  .position-relative {
-    position: relative;
-  }
-  
-  .submenu-wrapper {
-    height: 100%;
-  }
-  
-  .submenu{
-    top: 0;
-    left: 100%;
-    width: 972px;
-    min-height: 100%;
-    margin: 0px 24px;
-    z-index: 900;
-  }
-  
-  .custom-hover-link:hover{
-    color: #ed017f !important;
-  }
-
-  .overall-container{
-    height: auto;
-    color: #fff;
-    
-  }
-
-  .icon{
-    color: white;
-    padding:2em;
-    
-  }
-
-  .footer-top{
-    height: 7rem;
-    margin: auto;
-    padding: 0%;
-    background-color: #494848;
-
-  }
-
-  
-.footer-bottom{
-  height: 26em;
-  background-color: #1f1d1d;
-  margin: auto;
-  padding: 5px 5px;
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+.navbar {
+  background-color: #ed017f;
+  z-index: 1050;
+  position: relative;
+}
 
+.navbar .dropdown-menu {
+  z-index: 1100;
+  position: absolute;
+}
+
+.custom-navbar {
+  padding: 0rem 0rem;
+  font-size: 0.875rem;
+  height: 3.75rem;
+}
+
+.navbar .nav-item {
+  position: relative;
+  transition: background-color 0.3s;
+  height: 100%;
+}
+
+.nav-item:hover {
+  background-color: white;
+}
+
+.nav-item:hover .nav-link {
+  color: #ed017f !important;
+}
+
+.subnavbar {
+  background-color: #94004f;
+}
+
+.navbar .nav-link-hover {
+  color: white;
+  padding: 8px 18px;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar .nav-link-hover:hover {
+  color: #080808 !important;
+  background-color: #fff !important;
+  padding: 8px 18px !important;
+  text-decoration: none;
+  margin: 0;
+}
+
+.navbar .custom-nav-link-hover {
+  color: white;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 12px 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar .custom-nav-link-hover:hover {
+  color: #ed017f !important;
+  background-color: #fff !important;
+  padding: 12px 12px !important;
+  align-items: center;
+  text-decoration: none;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.submenu-wrapper {
+  height: 100%;
+}
+
+.submenu {
+  top: 0;
+  left: 100%;
+  width: 972px;
+  min-height: 100%;
+  margin: 0px 24px;
+  z-index: 900;
+}
+
+.custom-hover-link:hover {
+  color: #ed017f !important;
+}
+
+.nav-link-custom {
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.nav-link-custom:hover {
+  color: black;
+  background-color: #ffffff;
+}
+
+.konga-container{
+  height: auto;
+  display: flex;
+}
+
+.konga-container img{
+  border-radius: 10px;
+}
+
+.konga-container1{
+  width: 70vw;
+  height: 10vh;
+  padding: 1rem;
+}
+
+.konga-container1 img{
+  height: 65vh;
+}
  
+.konga-container2{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: .4rem;
+  margin-left: -0.3rem;
+}
 
-  .button{
-    height: 3.5em;
-    background-color: #ed017f;
-    border-radius: 5px;
-    width: 7rem;
-    color: white;
+.konga-container2 img{
+  height: 34.2vh;
+  width: 14.1vw;
+  padding: .6rem;
+  border-radius: 20px;
+}
 
-  
-  }
+.custom-btn { 
+  background-color: white; 
+  color: #cc458d ; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: none; 
+  transition: all 0.3s ease; 
+}
 
-  input{
-    height: 3.5em;
-    border-radius: 5px;
-    width: 20rem;
-  }
+.custom-btn:hover { 
+  background-color: white; 
+  color: #cc458d ; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-2px); 
+}
 
-img{
+.icon-pink { 
+  color: #cc458d ; 
+}
+
+.homethree-container{
+  height: auto;
+  padding: 1rem;
+}
+
+.homethree-top{
+  margin: .2rem;
+  height: auto;
+  color: white;
+  background: url("./images/imageEight.png");
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.homethree-top p{
+  font-size: 35px
+}
+
+.homethree-top a{
+  text-decoration: none;
+  color: white;
+}
+
+.homethree-top a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+.card-hover {
+  transition: box-shadow 0.3s ease-in-out;
+  margin: .5rem;
+  cursor: pointer;
+}
+
+.card-hover:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cars {
+  text-decoration: line-through;
+  border-radius: 3px;
+}
+
+.cars2{
+  color: green;
+  font-size: smaller;
+}
+
+.sponsored{
+  border-bottom: 1px solid #888585;
+  padding-bottom: 10px;  
+}
+
+.card1 {
+  cursor: pointer;
+}
+
+.card1:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.homefive-container{
+  height: auto;
+  padding: 1rem;
+}
+
+.homefive-top{
+  margin: .2rem;
+  height: auto;
+  color: black;
+  background-color: pink;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.homefive-top a{
+  text-decoration: none;
+  margin-right: 33rem;
+  color: black;
+}
+
+.homefive-top a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+}
+.star-rating .bi {
+  font-size: 1rem;
+  color: #D3D3D3; 
+  cursor: pointer;
+}
+.star-rating .bi.hover,
+.star-rating .bi.hover ~ .bi {
+  color: #FFED85; 
+}
+.star-rating .bi.selected {
+  color: #FFD700; 
+}
+
+.hover-zoom {
+  transition: transform 0.3s ease; 
+}
+
+.hover-zoom:hover {
+  transform: scale(1.03); 
+}
+
+.img-fit {
+  width: calc(100%);
+  height: auto;
+}
+
+.fitness{
+  font-size: small;
+}
+
+.fitness1{
+  font-size: medium;
+}
+
+.cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.card-item {
+  flex: 1 0 calc(20% - 10px); /* Make each card take 20% of the available width */
+  max-width: calc(20% - 10px);
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.overall-container1{
+  height: auto;
+  color: #fff;
+}
+
+.icon1{
+  color: white;
+  padding:2em;
+}
+
+.footer-top{
+  height: 7rem;
+  margin: auto;
+  padding: 0%;
+  background-color: #494848;
+}
+
+.footer-bottom{
+height: 26em;
+background-color: #1f1d1d;
+margin: auto;
+padding: 5px 5px;
+}
+
+.button1{
+  height: 3.5em;
+  background-color: #ed017f;
+  border-radius: 5px;
+  width: 7rem;
+  color: white;
+}
+
+.overall-container1 input {
+  height: 3.5em;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+.overall-container1 img {
   height: 4rem;
   margin-top: 2rem;
 }
 
-li{
+.overall-container1 li {
   margin-top: auto;
   padding: 0%;
   line-height: 2em;
@@ -156,15 +360,12 @@ li{
   list-style-type: none;
 }
 
-li a {
+.overall-container1 li a {
   color: white;
   text-decoration: none;
   line-height: 2rem;
 }
 
-
-
-
-
-
-
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}

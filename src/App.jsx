@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Help from './pages/Help'
 import Home from './pages/Home'
@@ -27,8 +26,8 @@ const App = () => {
         <Route path='/product' element={<Product/>} />
         <Route path='/locator' element={<Locator/>} />
         </Routes>
+        <Footer/>
       </Router>
-      <Footer/>
     </div>
   )
 }

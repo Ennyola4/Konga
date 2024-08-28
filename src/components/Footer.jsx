@@ -13,10 +13,10 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='overall-container'>
+    <div className='overall-container1'>
         <div className='footer-top mb-0'>
            <div>
-             <div  className='icon d-flex justify-content-evenly'>
+             <div  className='icon1 d-flex justify-content-evenly'>
                <h6><MdEmail /></h6>
                <ul>
                 <li><h6>EMAIL</h6>konga@gmail.com</li>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <li><h6>GET LATEST DEALS</h6>Our best promotions sent to your inbox.</li>
                </ul>
                <input type="text" placeholder='Email Address'/>
-               <button className='button ml-0'><h5>Subscribe</h5>
+               <button className='button1 ml-0'><h5>Subscribe</h5>
                </button>
              </div>
            </div>

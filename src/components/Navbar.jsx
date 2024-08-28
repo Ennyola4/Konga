@@ -1,10 +1,8 @@
-import React, { useEffect } from 'react'
 import { FaSearch } from "react-icons/fa"
 import { FaQuestionCircle } from "react-icons/fa"
-import { LiaShoppingCartSolid } from "react-icons/lia"
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
-
+import { LiaShoppingCartSolid } from "react-icons/lia";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Navbar = () => {
   return (
@@ -12,7 +10,7 @@ const Navbar = () => {
 
         {/* <Header Section/> */}
 
-        <header className="header bg-light text-light py-0">
+        <header className="header bg-light text-light py-0 sticky-top">
             <div className="container d-flex justify-content-center align-items-center">
                 <div className="row w-100">
                     <div className="col text-center">
@@ -41,13 +39,13 @@ const Navbar = () => {
                     </div >
                 </div>
             </div>
-        </header>
+        </header> 
 
         {/* <Main Navbar Section/> */}
 
       <nav className="navbar navbar-expand-lg sticky-top py-1">
         <div className="container-fluid custom-navbar">
-            <a className="navbar-brand nav-link active text-white mx-2" href="/"><h1>Konga</h1></a>
+            <a className="navbar-brand nav-link active text-white mx-2" href="/">Konga</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>
@@ -92,7 +90,7 @@ const Navbar = () => {
                 <li className="nav-item mx-3 text-white mt-3 mb-3">
                 <a className="nav-link text-white bg-success d-flex align-items-center justify-content-between px-2 py-2" href="/cart" style={{ width: "auto"}}>
                     <div className="d-flex align-items-center">
-                    <LiaShoppingCartSolid style={{ fontSize: "1.5em", marginRight: "0.5em"}} /> <span>My <br/> Cart</span>
+                    <LiaShoppingCartSolid style={{ fontSize: "1.5em", marginRight: "0.5em" }} /> <span>My <br/> Cart</span>
                     </div>
                
                     <span className="badge bg-light text-dark d-flex justify-content-center align-items-center ms-3"
