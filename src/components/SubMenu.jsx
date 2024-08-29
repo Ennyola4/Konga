@@ -12,20 +12,20 @@ const SubMenu = () => {
       clearTimeout(timerRef.current);
     }
     setActiveSubMenu(menu);
+    if (menu === 'allCategories') {
+      setShowAllCategories(true);
+    }
   };
 
   const handleMouseLeave = () => {
     timerRef.current = setTimeout(() => {
       setActiveSubMenu(null);
+      setShowAllCategories(false);
     }, 500);
   };
 
-  const toggleAllCategories = () => {
-    setShowAllCategories((prevState) => !prevState);
-  };
-
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <nav className="sticky-top">
         <nav
           className="navbar navbar-dark py-0 fixed-navbar"
@@ -34,10 +34,11 @@ const SubMenu = () => {
           <div className="row w-100">
             <div className="container-fluid d-flex align-items-center">
               <button
-                className="navbar-toggler mx-2 text-white dropdown-toggle"
+                className="navbar-toggler mx-2 text-white"
                 type="button"
                 style={{ fontSize: "0.885rem", backgroundColor: "transparent", border: "none", boxShadow: "none" }}
-                onClick={toggleAllCategories}
+                onMouseEnter={() => handleMouseEnter('allCategories')}
+                onMouseLeave={handleMouseLeave}
               >
                 All Categories<span className="navbar-toggler-icon mx-2"></span>
               </button>
@@ -57,23 +58,23 @@ const SubMenu = () => {
 
       {/* All Categories Submenu - Vertical Display */}
       {showAllCategories && (
-        <div className="bg-white p-0 m-0" style={{ width: '100%' }}>
-            <ul className="dropdown-menu show p-2" style={{ width: '19rem' }}>
-                <li><a className="nav-link-custom dropdown-item" href="#computer" onMouseEnter={() => handleMouseEnter('computer')} onMouseLeave={handleMouseLeave}>Computer and Accessories<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#phone" onMouseEnter={() => handleMouseEnter('phones')} onMouseLeave={handleMouseLeave}>Phones and Tablets<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#electronics" onMouseEnter={() => handleMouseEnter('electronics')} onMouseLeave={handleMouseLeave}>Electronics<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#fashion" onMouseEnter={() => handleMouseEnter('fashion')} onMouseLeave={handleMouseLeave}>Konga Fashion<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#kitchen" onMouseEnter={() => handleMouseEnter('kitchen')} onMouseLeave={handleMouseLeave}>Home and Kitchen<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#baby" onMouseEnter={() => handleMouseEnter('kids')} onMouseLeave={handleMouseLeave}>Baby, Kids and Toys<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#beauty" onMouseEnter={() => handleMouseEnter('beauty')} onMouseLeave={handleMouseLeave}>Beauty, Health & Personal Care<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#drinks" onMouseEnter={() => handleMouseEnter('drinks')} onMouseLeave={handleMouseLeave}>Drinks and Groceries<br></br><br></br></a></li>
-                <li><a className="nav-link-custom dropdown-item" href="#other" onMouseEnter={() => handleMouseEnter('other')} onMouseLeave={handleMouseLeave}>Other Categories</a></li>
+        <div className="bg-white p-2 mb-5" style={{ width: '100%', zIndex: 1050, position: 'absolute', top: '40px'}}>
+            <ul className="show p-3" style={{ width: '19rem' }}>
+                <a className="nav-link-custom" href="#computer" onMouseEnter={() => handleMouseEnter('computer')} onMouseLeave={handleMouseLeave}>Computer and Accessories<br></br><br></br></a>
+                <a className="nav-link-custom" href="#phone" onMouseEnter={() => handleMouseEnter('phones')} onMouseLeave={handleMouseLeave}>Phones and Tablets<br></br><br></br></a>
+                <a className="nav-link-custom" href="#electronics" onMouseEnter={() => handleMouseEnter('electronics')} onMouseLeave={handleMouseLeave}>Electronics<br></br><br></br></a>
+                <a className="nav-link-custom" href="#fashion" onMouseEnter={() => handleMouseEnter('fashion')} onMouseLeave={handleMouseLeave}>Konga Fashion<br></br><br></br></a>
+                <a className="nav-link-custom" href="#kitchen" onMouseEnter={() => handleMouseEnter('kitchen')} onMouseLeave={handleMouseLeave}>Home and Kitchen<br></br><br></br></a>
+                <a className="nav-link-custom" href="#baby" onMouseEnter={() => handleMouseEnter('kids')} onMouseLeave={handleMouseLeave}>Baby, Kids and Toys<br></br><br></br></a>
+                <a className="nav-link-custom" href="#beauty" onMouseEnter={() => handleMouseEnter('beauty')} onMouseLeave={handleMouseLeave}>Beauty, Health & Personal Care<br></br><br></br></a>
+                <a className="nav-link-custom" href="#drinks" onMouseEnter={() => handleMouseEnter('drinks')} onMouseLeave={handleMouseLeave}>Drinks and Groceries<br></br><br></br></a>
+                <a className="nav-link-custom" href="#other" onMouseEnter={() => handleMouseEnter('other')} onMouseLeave={handleMouseLeave}>Other Categories</a>
             </ul>
         </div>
       )}
 
                 {/* Computers and Accessories submenu */}
-        <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'computer' ?      'd-block' : 'd-none'}`} style={{ width: '100vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('computer')} onMouseLeave={handleMouseLeave}>
+        <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'computer' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('computer')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                 <div className="col-md-3 mx-1 my-1">
                     <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#">Laptops</a>
@@ -135,7 +136,7 @@ const SubMenu = () => {
         </div>
 
         {/* Computers and Accessories1 submenu */}
-        <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'computer1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('computer1')} onMouseLeave={handleMouseLeave}>
+        <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'computer1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100  }} onMouseEnter={() => handleMouseEnter('computer1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                 <div className="col-md-3 mx-1 my-1">
                     <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#">Laptops</a>
@@ -199,7 +200,7 @@ const SubMenu = () => {
                         
 
                     {/* Phones and Tablets Submenu */}
-        <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'phones' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('phones')} onMouseLeave={handleMouseLeave}>
+        <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'phones' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('phones')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Mobile Phones</a>
@@ -253,7 +254,7 @@ const SubMenu = () => {
                 </div>
 
                 {/* Phones and Tablets1 Submenu */}
-        <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'phones1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('phones1')} onMouseLeave={handleMouseLeave}>
+        <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'phones1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100  }} onMouseEnter={() => handleMouseEnter('phones1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Mobile Phones</a>
@@ -308,7 +309,7 @@ const SubMenu = () => {
 
 
                     {/* Electronics Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'electronics' ?  'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('electronics')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'electronics' ?  'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('electronics')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Televisions</a>
@@ -378,7 +379,7 @@ const SubMenu = () => {
                 </div>
 
                 {/* Electronics1 Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'electronics1' ?  'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('electronics1')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'electronics1' ?  'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('electronics1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Televisions</a>
@@ -448,7 +449,7 @@ const SubMenu = () => {
                 </div>
 
                     {/* Konga Fashion Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'fashion' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('fashion')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'fashion' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('fashion')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Women's Wear</a>
@@ -508,7 +509,7 @@ const SubMenu = () => {
                 </div>
 
                 {/* Konga Fashion Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'fashion1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('fashion1')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'fashion1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('fashion1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Women's Wear</a>
@@ -568,7 +569,7 @@ const SubMenu = () => {
                 </div>
 
                     {/* Home and Kitchen Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'kitchen' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('kitchen')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'kitchen' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('kitchen')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Large Appliances</a>
@@ -629,7 +630,7 @@ const SubMenu = () => {
                 </div>
 
                         {/* Baby, Kids and Toys Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'kids' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('kids')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'kids' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('kids')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Fashion for Girls</a>
@@ -691,7 +692,7 @@ const SubMenu = () => {
                 </div>
 
                 {/* Home and Kitchen Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'kitchen1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('kitchen1')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'kitchen1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('kitchen1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Large Appliances</a>
@@ -752,7 +753,7 @@ const SubMenu = () => {
                 </div>
 
                         {/* Baby, Kids and Toys Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'kids1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 0, top: '148px' }} onMouseEnter={() => handleMouseEnter('kids1')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'kids1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: -30, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('kids1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Fashion for Girls</a>
@@ -815,7 +816,7 @@ const SubMenu = () => {
                 
             
                 {/* Beauty, Health & Personal Care Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'beauty' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('beauty')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'beauty' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('beauty')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Makeup</a>
@@ -877,7 +878,7 @@ const SubMenu = () => {
                 </div>
 
                 {/* Beauty, Health & Personal Care Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'beauty1' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('beauty1')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'beauty1' ?      'd-block' : 'd-none'}`} style={{ width: '100%', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('beauty1')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Makeup</a>
@@ -940,7 +941,7 @@ const SubMenu = () => {
                 
 
                         {/* Drinks & Groceries Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'drinks' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('drinks')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'drinks' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('drinks')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Foods</a>
@@ -1007,7 +1008,7 @@ const SubMenu = () => {
                 </div>
 
                     {/* Other Categories Submenu */}
-            <div className={`submenu position-fixed bg-white p-2 my-0 ${activeSubMenu === 'other' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '148px' }} onMouseEnter={() => handleMouseEnter('other')} onMouseLeave={handleMouseLeave}>
+            <div className={`submenu position-absolute bg-white p-2 my-0 ${activeSubMenu === 'other' ?      'd-block' : 'd-none'}`} style={{ width: '78vw', left: 267, top: '40px', zIndex: 1100 }} onMouseEnter={() => handleMouseEnter('other')} onMouseLeave={handleMouseLeave}>
             <div className="row mx-3">
                         <div className="col-md-3 mx-1 my-1">
                             <a className="d-block custom-hover-link text-decoration-none text-black fw-bold" href="#" > Sports and Fitness</a>
