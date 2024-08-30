@@ -1,10 +1,15 @@
+import React, {useState} from "react"
+import { useNavigate } from "react-router-dom"
 import { FaSearch } from "react-icons/fa"
 import { FaQuestionCircle } from "react-icons/fa"
-import { LiaShoppingCartSolid } from "react-icons/lia";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { LiaShoppingCartSolid } from "react-icons/lia"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+import Login from '../pages/Login'
 
-const Navbar = () => {
+
+const Navbar = ({ onLoginClick }) => {
+    
   return (
     <div>
 
@@ -83,9 +88,12 @@ const Navbar = () => {
             </li>
     
 
-                <li className="nav-item mx-4 text-white mt-3">
-                <a className="nav-link text-white" href="/login">Login / <br/> Signup</a>
+                <div className="d-flex nav-item mx-4 text-white mt-3">
+                <li >
+                <a className="nav-link text-white btn log-in" href="#" onClick={onLoginClick}>Login / <br/> Signup</a>
+                   
                 </li>
+                </div>
 
                 <li className="nav-item mx-3 text-white mt-3 mb-3">
                 <a className="nav-link text-white bg-success d-flex align-items-center justify-content-between px-2 py-2" href="/cart" style={{ width: "auto"}}>

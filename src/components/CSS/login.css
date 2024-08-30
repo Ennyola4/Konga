@@ -1,0 +1,64 @@
+.login-page{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 33%;
+    height: 100%;
+    background: rgba(253, 251, 251, 0.959);
+    box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+    transition: right 0.10 ease;
+    z-index: 1200;
+  }
+  
+  .login-page.visible{
+    right: 0;
+  }
+
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    z-index: 1200;
+    pointer-events: none;
+  }
+
+  .login-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .submit{
+    background-color: #33b27b;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: .9375rem;
+    font-weight: 700;
+    width: 100%;
+    margin: 0;
+    height: 2.5rem;
+    border-radius: .1875;
+  }
+
+  p{
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 10 0;
+    border: 1px;
+    margin: 0;
+  }
+
+  div{
+    display: block;
+  }
+
+
+
+
+  
