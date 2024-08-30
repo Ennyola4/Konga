@@ -28,7 +28,7 @@ const Login = ({isVisible, onClose}) => {
 
             <div className="mt-3 mb-3">
                 <label className="form-label">Password</label>
-                <input type="password" className='form-control' placeholder='Enter Password' />
+                <input type="password" className='form-control' />
             </div>
             <a href="#" className='d-flex justify-content-end align-items-center  text-dark' style={{color: "red"}}>Forgot Password?</a>
             

@@ -4,10 +4,12 @@
     right: -100%;
     width: 33%;
     height: 100%;
-    background: rgba(253, 251, 251, 0.959);
+    background: rgb(253, 251, 251);
     box-shadow: 0 0 10px rgba(0,0,0, 0.5);
     transition: right 0.10 ease;
     z-index: 1200;
+    padding: 15px 15px;
+    margin: 0;
   }
   
   .login-page.visible{
@@ -30,7 +32,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 1px solid #ccc;
+    margin:0 ;
+   
   }
 
   .submit{
