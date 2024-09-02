@@ -370,3 +370,26 @@ li {
   background: '#fff';
   
 }
+/* Locator Styling */
+.icon-circle {
+  background-color: #94004f;
+  color: #ffffff;
+  margin-right: 20px;
+  font-size: 45px;;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+}
+.icon-circle2{
+  background-color: #ed017f;
+  font-size: 45px;
+  color: #ffffff;
+  border-radius: 15%;
+  padding: 5px;
+  display: inline-block;
+}
+
+
+
+
+
