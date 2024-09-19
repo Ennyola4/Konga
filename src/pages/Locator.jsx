@@ -12,7 +12,7 @@ const Locator = () => {
           <nav style={{ '--bs-breadcrumb-divider': '>' }} aria-label="breadcrumb">
             <ol className="breadcrumb">
               <li className="breadcrumb-item">
-                <a href="/" className='text-dark me-3'>Home > </a>
+                <a href="/" className='text-dark me-3'>Home &gt; </a>
               </li>
               <li className=" fw-bold breadcrumb-item active" aria-current="page">
                 Store Locator

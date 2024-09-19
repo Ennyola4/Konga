@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div>
                  {/* {UPPER FOOTER} */}
-        <div className='mt-5 py-1 text-light' style={{ backgroundColor: "#2e2e2e", overflow: "hidden"}}>
+        <div className='py-1 text-light' style={{ backgroundColor: "#2e2e2e", overflow: "hidden"}}>
             <div className='d-flex justify-item-content-between align-items-center'  style={{ padding: "10px 0", flexWrap: "wrap"}}>
 
                 {/* EMAIL SUPPORT */}
